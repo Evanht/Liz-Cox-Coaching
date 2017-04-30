@@ -1,5 +1,6 @@
 
 class MessagesController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def index
     @messages = Message.all
@@ -19,4 +20,11 @@ class MessagesController < ApplicationController
       redirect_to root_path
     end
   end
+
+  private
+
+  def message_params
+    params.require(:message).permit(:first_name, :last_name, :email, :subject, :message)
+  end
+
 end

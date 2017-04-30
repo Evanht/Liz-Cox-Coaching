@@ -2,7 +2,7 @@
   <div class="container">
     <div class="col-sm-10 col-sm-offset-1 col-xs-12">
       <h1 class="text-center">Articles</h1>
-      <hr>
+      <hr style="border: 1px solid #5D5EB7;">
       <% @posts.reverse.each do |post| %>
       <div class="col-xs-12 text-center">
         <div class="text-center">
@@ -24,7 +24,7 @@
           <%= link_to "Edit", edit_post_path(post), class: "btn btn-default" %>
           <%= link_to "Delete", post_path(post), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>
         <% end %>
-        <hr />
+        <hr style="border: 1px solid #2A2D31;"/>
       </div>
       <% end %>
     </div>
