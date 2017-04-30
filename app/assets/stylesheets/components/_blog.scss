@@ -1,0 +1,26 @@
+.blog-show-container {
+  margin-top: 100px;
+}
+
+.blog-index-container {
+  margin-top: 150px;
+}
+
+#featured-article {
+  padding: 10px;
+  height: 360px;
+}
+
+@media (max-width: 460px) {
+  #featured-article {
+    padding: 10px;
+    height: 410px;
+  }
+}
+
+@media (max-width: 390px) {
+  #featured-article {
+    padding: 10px;
+    height: 490px;
+  }
+}

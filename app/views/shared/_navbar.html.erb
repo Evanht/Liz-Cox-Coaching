@@ -7,19 +7,29 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <div class="navbar-wagon-link">
-      <h3>Philosophy</h3>
+       <%= link_to '/#philosophy' do %>
+        <h3>Philosophy</h3>
+      <% end %>
     </div>
     <div class="navbar-wagon-link">
-      <h3>What we do</h3>
+       <%= link_to '/#what-we-do' do %>
+        <h3>What we do</h3>
+      <% end %>
     </div>
     <div class="navbar-wagon-link">
-      <h3>About</h3>
+      <%= link_to '/#about' do %>
+        <h3>About</h3>
+      <% end %>
     </div>
     <div class="navbar-wagon-link">
-      <h3>Articles</h3>
+      <%= link_to posts_path do %>
+        <h3>Articles</h3>
+      <% end %>
     </div>
     <div class="navbar-wagon-link">
-      <h3 id="contact">Contact us</h3>
+       <%= link_to '/#contact-us' do %>
+        <h3 id="contact">Contact us</h3>
+      <% end %>
     </div>
 
 
@@ -27,21 +37,15 @@
     <% if user_signed_in? %>
 
       <!-- Notification -->
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
-        <div class="badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <div class="badge badge-blue">3</div>
-        </div>
-      <% end %>
 
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag "liz-avatar.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+              <%= link_to "/posts/new" do %>
+                <i class="fa fa-user"></i> <%= t(".profile", default: "New Blog Post") %>
               <% end %>
             </li>
             <li>
