@@ -1,0 +1,172 @@
+// .container {
+//   margin-right: auto;
+//   margin-left: auto;
+//   // padding-left: 80px;
+//   // padding-right: 80px;
+// }
+// .hide-overflow{
+//   overflow-x: hidden;
+// }
+.home-banner{
+  height: calc(110vh);
+}
+
+.background-white{
+  // background-color: white;
+}
+
+.banner {
+  color: white;
+  // background-color: white;
+  text-align: center;
+  // height: calc(100vh - 100px);
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+}
+.banner h1 {
+  font-size: 36px;
+  font-weight: 100;
+  font-family: Raleway;
+  letter-spacing: 1px;
+  // border-bottom: 1px solid $blue;
+}
+
+.banner p {
+  font-size: 20px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+  font-family: Raleway;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.banner-text{
+  margin-top: 26vh;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.banner-content-top{
+  margin-top: 10vh;
+}
+
+.banner-content{
+  // margin-top: 50px;
+  // height: 100vh;
+}
+
+.blue-underline{
+  box-shadow: -1px 5px 0px -1px #5d5eb7;
+}
+
+.yellow-underline{
+  box-shadow: -1px 5px 0px -1px $yellow;
+}
+
+.text-bold{
+  font-family:Roboto;
+  font-weight: bold;
+}
+
+.hyacinth-banner{
+  height: 70vh;
+}
+
+.flower-sizing{
+  height: 60vh;
+}
+
+#board-coaching{
+  margin-bottom: 68px;
+  margin-top: 50px;
+  letter-spacing: 11px;
+}
+
+.table-info{
+  text-align: justify;
+}
+
+#push-img-down{
+  margin-top: 100px;
+}
+
+#liz-headhshot{
+  height: 93vh;
+  margin-top: 57px;
+  border-radius: 6px
+}
+
+.featured-testimonial{
+  font-family: Roboto;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+#signature{
+  height: 27vh;
+  // position: absolute;
+  // top: 10px;
+  // right: 219px;
+}
+
+@media (max-width: 991px) {
+  #signature-row {
+    height: 162px;
+  }
+}
+
+@media (max-width: 436px) {
+  #signature {
+    right: auto;
+  }
+}
+
+.button {
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  letter-spacing: 3px;
+  background-color: black;
+}
+
+
+.button:hover {
+  color: $blue;
+  text-decoration: none;
+}
+
+.modal-content {
+  background-color: black;
+}
+
+.btn-default {
+  background-color: black;
+  color: white;
+}
+
+.testimonee {
+  font-style: normal;
+  font-size: 18px;
+  color: $yellow;
+}
+
+#myModalLabel{
+  letter-spacing: 4px;
+  font-weight: 100;
+}
+
+.modal-body {
+  padding: 48px;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.push-down{
+  margin-top: 65px;
+}

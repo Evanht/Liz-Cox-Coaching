@@ -1,2 +1,356 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<!-- This is the Home banner -->
+
+    <div class="home-banner" style="background-image: /*linear-gradient(-386deg, rgba(68, 69, 71, 0) 0%, rgba(0, 0, 0, 0.8) 50%),*/ url('<%= image_path 'background-image.png' %>'); background-repeat:   no-repeat; background-position: center center;">
+    <div class="container hide-overflow">
+      <div class="row">
+        <div class="banner">
+          <div class="banner-content-top">
+            <div class="col-xs-12 col-md-6">
+              <div class="banner-text">
+                <h1>Creating <span class="blue-underline">Sustainable change</span></h1>
+                <p style="margin-top: 53px;">Working with boards, teams and individuals to unlock their potential and to help them perform at their best.</p>
+                <h3 style="color: white; margin-top: 58px;">…by going <span class="text-bold">beneath</span> the surface</h3>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <!-- <div id="main-banner-image">
+                <%#= image_tag 'hyacinth-export.png', class:"hyacinth-banner"  %>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+     </div>
+  <!-- <h2 style="text-align: center; color: white; margin-top: 58px;">…by going <span class="text-bold">beneath</span> the surface</h2> -->
+
+  <!-- This is the 3 tree beneath the surface section -->
+  <div class="container">
+  <div class="center" style="text-align: center;">
+    <div class="banner">
+      <div class="banner-content">
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <%= image_tag 'blue-flower.png', class:"flower-sizing" %>
+            <p>
+              Recognising that the right
+              answer is not always the
+              obvious or easy answer
+            </p>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <%= image_tag 'yellow-flower.png', class:"flower-sizing" %>
+            <p>
+              Listening as much to what is
+              <span class="yellow-underline text-bold">not said</span>  as to what <span class="blue-underline text-bold">is said</span>
+            </p>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <%= image_tag 'purple-flower.png', class:"flower-sizing" %>
+            <p>
+              Drawing on a wealth of
+              experience and expertise
+              in the business world
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- This is the Board Coaching section -->
+  <div class="banner">
+    <div class="banner-content">
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div class="table-info">
+            <h2 id="board-coaching"> Board Coaching</h2>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                  Working with the Board Effectiveness model
+                  developed by Liz Cox at Henley Business School
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                  Helping to make boards more effective in their
+                  core decision making role
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                  Creating a more constructive and positive board environment
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <%= image_tag 'white-flowers.png', class:"flower-sizing" %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- This is the individual coaching section -->
+  <div class="banner">
+    <div class="banner-content">
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <%= image_tag 'white-flower.png', class:"flower-sizing", id:"push-img-down" %>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="table-info">
+            <h2 id="board-coaching"> Individual Coaching</h2>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                 Meeting leadership challenges
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                  Succesful career change and transition
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                  Improved management and business development skills
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                  Increased personal impact and effectiveness
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                  Building confidence, self esteem and resilience
+                </p>
+              </div>
+            </div>
+            <hr>
+             <div class="row">
+              <div class="col-xs-12">
+                <p>
+                  Introducing a better work/life balance
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- This is the Team Coaching section -->
+
+  <div class="banner">
+    <div class="banner-content">
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div class="table-info">
+            <h2 id="board-coaching"> Team Coaching</h2>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                 Clear strategic goals
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                  Enhanced dynamics
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                  Better communication
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                  More constructive and supportive working culture
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                  Greater resilience to internal and external challenge
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <%= image_tag 'white-drops.png', class:"flower-sizing", id:"push-img-down" %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- This is the About section -->
+
+  <div class="banner">
+    <div class="banner-content">
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div class="table-info">
+            <h2 id="board-coaching"> Liz Cox (BA, MSc)</h2>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>
+                 Liz acts as a coach and advisor to boards, senior executives, and leaders within a number of organisations and industries including corporate, finance, marketing, creative media, property and publishing.  An alumni of Henley Business School, Liz specialises in leadership development, strategic planning, organisational structure and staffing retention practices, drawing on her extensive entrepreneurial and corporate business experience.
+                </p>
+                <p>
+                  Her career began in advertising at Saatchi & Saatchi before moving into market research. She co-founded Directions and built the company into one of the premier boutique research firms in the UK. After selling her ownership in Directions, she joined The Big Picture – a growing design research agency with a blue-chip, international client base – and helped guide the firm’s strategic and organisational development to become a global leader in its field.
+                </p>
+                <p>
+                  Liz holds a Masters Degree in Coaching and Behavioural Change (Distinction) and a Certificate in Coaching (Distinction) from the Henley Business School.  She also holds a Bachelor’s Degree in French and Italian from the University of London. Liz subscribes to the EMCC (European Mentoring & Coaching Council) code of ethics.
+                </p>
+              </div>
+            </div>
+            <div class="row" id="signature-row">
+              <div class="col-xs-12">
+                <%= image_tag 'signature.png', id:"signature" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="row">
+            <div class="col-xs-12">
+              <%= image_tag 'Liz-headshot.png', id:"liz-headhshot" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <p class="featured-testimonial">
+                “The Board of Trustees at Positively UK has worked with Liz Cox over the past 18 months. Liz has led two day-long workshops designed to maximise the direction, connection and cohesiveness of our Board. Her focus is always on ensuring maximum interaction between the Trustees; that everyone is heard and has the space to shape the future of the organisation. Group work is a strong feature of her approach. The result is a connected Board with a clear, sharpened vision, a coordinated strategy and a team fully aligned behind it and ready to deliver.” - <span class="testimonee">Chair, Board of Trustees</span>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <!-- This is the testimonials modal -->
+              <!-- Button trigger modal -->
+              <button type="button" class="button btn-block" data-toggle="modal" data-target="#myModal">
+                Read more
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Testimonials</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-xs-12 ">
+                          <p class="featured-testimonial">
+                           ‘I’ve worked closely with Liz for over 15 years and during that time she has never  failed to provide excellent advice. Her guidance is always considered and thought-through; she thinks strategically, able to recognise the bigger picture which is complemented by her awareness of any sensitivities involved so that she recommends the most diplomatic course of action. This combination of skills has contributed to a long and successful relationship and has resulted in her becoming a most trusted confidante.’ - <span class="testimonee">Managing Director, Marketing Services</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <p class="featured-testimonial">
+                           "Liz combines insight with incisiveness, which she supports with exceptional listening ability and obvious respect. She epitomises professionalism." - <span class="testimonee">Partner, Law Firm</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <p class="featured-testimonial">
+                            ‘"Liz has a relaxed and engaging style which rubbed off on me. She knew when to be lighthearted and when to be more serious. She has seriously high EQ." - <span class="testimonee">Director, Private Equity Fund</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <p class="featured-testimonial">
+                           “Liz showed me that positive change is possible. This has given me dramatically more confidence." - <span class="testimonee">Director, Investment Bank</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <p class="featured-testimonial">
+                            "I value and trust Liz more than anyone else I have worked with in my business career." - <span class="testimonee">Managing Director, Marketing Services</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="button btn-block" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of modal -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+          <!-- end of the About section above -->
+        </div>
+          <!-- Beginning of the Articles section -->
+        <div class="banner">
+          <div class="banner-content push-down">
+            <div class="row">
+              <div class="col-xs-12 col-md-6">
+                <div class="row">
+                  <div class="table-info">
+                    <h2 id="board-coaching"> Articles</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                <%= image_tag 'brown-flowers.png', class:"flower-sizing" %>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- End of Articles section -->
+      </div>
+
+
+  <!-- Closing div for container -->
+</div>
