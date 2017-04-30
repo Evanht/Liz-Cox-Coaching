@@ -410,60 +410,80 @@
         <br>
         <%= link_to "All Articles", posts_path, class:"button btn-block text-center" %>
         <!-- end of Articles grid -->
-
+        <br>
+        <br>
         <!-- Beginning of the Contact us section -->
         <div class="row">
           <div class="col-xs-12 col-md-6">
-            <h3>Contact us</h3>
-            <p> Liz@mail.com</p>
-            <p> 07859647596</p>
+            <h2 style="letter-spacing: 4px;">Contact us</h2>
+            <br>
+            <h4 style="letter-spacing: 3px;"> E: liz@lizcoxcoaching.com</h4>
+            <br>
+            <h4 style="letter-spacing: 3px;"> M: +44 7850 647596 </h4>
           </div>
           <!-- contact form below -->
+          <br>
+
+          <%= simple_form_for @message do |f| %>
           <div class="col-xs-12 col-md-6">
             <div class="row">
               <div class="col-xs-12 col-md-6">
-                <div class="first-name">
-                  <p>first name</p>
+                <div class="input-field">
+                   <%= f.input :first_name, placeholder: 'first name' , label: false, class:"input-field" %>
                 </div>
               </div>
               <div class="col-xs-12 col-md-6">
-                <div class="last-name">
-                  <p>last name</p>
+                <div class="input-field">
+                  <%= f.input :last_name, placeholder: 'last name', label: false %>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-xs-12">
-                <div class="email-address">
-                  <p>email address</p>
+                <div class="input-field">
+                  <%= f.input :email, placeholder: 'email address', label: false %>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-xs-12 col-md-6">
-                <p>subject</p>
+                <div class="input-field">
+                  <%= f.input :subject, placeholder: 'subject', label: false %>
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="col-xs-12">
-                <p>message</p>
+                <div class="input-field">
+                  <%= f.input :message, placeholder: 'message', label: false %>
+                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-xs-12">
-                <button class="button btn-block">
-                  submit
-                </button>
+                <%= f.button :submit, 'Send', class:"button btn-block" %>
               </div>
             </div>
           </div>
+           <% end %>
           <!-- end of contact form -->
         </div>
-
-
-
         <!-- end of contact us section -->
-
-
   <!-- Closing div for container -->
 </div>
+
+<!-- footer -->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-4 offset-md-4">
+        <%= image_tag 'richmond-2.png', id:"agency-image" %>
+      </div>
+     </div>
+   </div>
+    <p class="flex-center-bottom"> <%= image_tag 'copyright.svg', id:"copyright" %> <span class="margin-left-footer">Richmond web design <%= Date.today.year %> </span></p>
+</div>
+
+
+
+
