@@ -7,13 +7,19 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <div class="navbar-wagon-link">
-      <h3>Philosophy</h3>
+       <%= link_to '/#philosophy' do %>
+        <h3>Philosophy</h3>
+      <% end %>
     </div>
     <div class="navbar-wagon-link">
-      <h3>What we do</h3>
+       <%= link_to '/#what-we-do' do %>
+        <h3>What we do</h3>
+      <% end %>
     </div>
     <div class="navbar-wagon-link">
-      <h3>About</h3>
+      <%= link_to '/#about' do %>
+        <h3>About</h3>
+      <% end %>
     </div>
     <div class="navbar-wagon-link">
       <%= link_to posts_path do %>
@@ -21,7 +27,9 @@
       <% end %>
     </div>
     <div class="navbar-wagon-link">
-      <h3 id="contact">Contact us</h3>
+       <%= link_to '/#contact-us' do %>
+        <h3 id="contact">Contact us</h3>
+      <% end %>
     </div>
 
 

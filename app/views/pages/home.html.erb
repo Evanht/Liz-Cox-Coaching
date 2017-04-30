@@ -21,12 +21,14 @@
           </div>
         </div>
       </div>
-     </div>
-     </div>
+    </div>
+  </div>
   <!-- <h2 style="text-align: center; color: white; margin-top: 58px;">…by going <span class="text-bold">beneath</span> the surface</h2> -->
 
   <!-- This is the 3 tree beneath the surface section -->
-  <div class="container">
+
+<div id="philosophy"></div>
+<div class="container">
   <div class="center" style="text-align: center;">
     <div class="banner">
       <div class="banner-content">
@@ -55,6 +57,7 @@
             </p>
           </div>
         </div>
+        <div id="what-we-do"></div>
       </div>
     </div>
   </div>
@@ -219,6 +222,7 @@
           <%= image_tag 'white-drops.png', class:"flower-sizing", id:"push-img-down" %>
         </div>
       </div>
+      <div id="about"></div>
     </div>
   </div>
 
@@ -412,7 +416,11 @@
         <!-- end of Articles grid -->
         <br>
         <br>
+        <br>
+        <br>
+        <br>
         <!-- Beginning of the Contact us section -->
+        <div id="contact-us"</div>
         <div class="row">
           <div class="col-xs-12 col-md-6">
             <h2 style="letter-spacing: 4px;">Contact us</h2>
@@ -476,14 +484,23 @@
 <div class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-4 offset-md-4">
+      <div class="col-md-4"></div>
+      <div class="col-xs-12 col-md-4 text-center" style="margin-top: 117px;">
         <%= image_tag 'richmond-2.png', id:"agency-image" %>
+        <p class="copyright-words">  <span class="margin-left-footer">Copyright Richmond Web Design <%= Date.today.year %> </span></p>
       </div>
+      <div class="col-md-4"></div>
      </div>
    </div>
-    <p class="flex-center-bottom"> <%= image_tag 'copyright.svg', id:"copyright" %> <span class="margin-left-footer">Richmond web design <%= Date.today.year %> </span></p>
+
 </div>
 
+
+<script>
+  window.addEventListener("hashchange", function () {
+  window.scrollTo(window.scrollX, window.scrollY - 100);
+  });
+</script>
 
 
 
