@@ -1,8 +1,8 @@
 #app/controllers/posts_controller.rb
 
 class PostsController < ApplicationController
-  before_action :find_post, only: [:edit, :update, :show, :delete]
-
+  before_action :find_post, only: [:edit, :update, :show, :destroy]
+   before_action :authenticate_user!, except: [:index, :show]
   # Index action to render all posts
   def index
     @posts = Post.all
@@ -15,13 +15,18 @@ class PostsController < ApplicationController
 
   # Create action saves the post into database
   def create
-    @post = Post.new(post_params)
-    if @post.save
-      flash[:notice] = "Successfully created post!"
-      redirect_to post_path(@post)
+    if current_user.admin?
+      @post = Post.new(post_params)
+      if @post.save
+        flash[:notice] = "Successfully created post!"
+        redirect_to post_path(@post)
+      else
+        flash[:alert] = "Error creating new post!"
+        render :new
+      end
     else
-      flash[:alert] = "Error creating new post!"
-      render :new
+      flash[:notice] = "You are not an admin"
+      redirect_to  new_post_path
     end
   end
 
@@ -31,13 +36,18 @@ class PostsController < ApplicationController
 
   # Update action updates the post with the new information
   def update
-    if @post.update_attributes(post_params)
-      flash[:notice] = "Successfully updated post!"
-      redirect_to post_path(@posts)
+    if current_user.admin?
+      if @post.update_attributes(post_params)
+        flash[:notice] = "Successfully updated post!"
+        redirect_to post_path(@post)
+      else
+        flash[:alert] = "Error updating post!"
+        render :edit
+      end
     else
-      flash[:alert] = "Error updating post!"
-      render :edit
-    end
+      flash[:notice] = "You are not an admin"
+      redirect_to post_path(@post)
+     end
   end
 
   # The show action renders the individual post after retrieving the the id
@@ -46,18 +56,23 @@ class PostsController < ApplicationController
 
   # The destroy action removes the post permanently from the database
   def destroy
-    if @post.destroy
-      flash[:notice] = "Successfully deleted post!"
-      redirect_to posts_path
+    if current_user.admin?
+      if @post.destroy
+        flash[:notice] = "Successfully deleted post!"
+        redirect_to posts_path
+      else
+        flash[:alert] = "Error updating post!"
+      end
     else
-      flash[:alert] = "Error updating post!"
+      flash[:notice] = "You are not an admin"
+      redirect_to post_path(@post)
     end
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :preview)
   end
 
   def find_post

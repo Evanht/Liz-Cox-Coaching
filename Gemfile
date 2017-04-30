@@ -18,6 +18,8 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 
 gem 'ckeditor'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'binding_of_caller'

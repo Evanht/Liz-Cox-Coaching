@@ -345,22 +345,72 @@
                 <div class="row">
                   <div class="col-xs-12">
                     <div class="table-info">
-                      <div id="featured-article">
-                        This is a feautured article
+                      <%= link_to post_path(Post.last.id), class:"navbar-wagon-link" do %>
+                      <div style="background-image: linear-gradient(-386deg, rgba(68, 69, 71, 0) 0%, rgba(0, 0, 0, 0.8) 50%),url('<%= image_path 'test.jpg' %>'); background-repeat:   no-repeat; background-position: center center;" id="featured-article">
+                        <h4><%= Post.last.title  %></h4>
+                        <p>
+                          <%= Post.last.preview %>
+                        </p>
                       </div>
+                      <% end %>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div class="col-xs-12 col-md-6">
-                <%= image_tag 'brown-flowers.png', class:"flower-sizing" %>
+                <%= image_tag 'brown-flowers.png', class:"flower-sizing push-down-96" %>
               </div>
             </div>
           </div>
         </div>
-          <!-- End of Articles section -->
-      </div>
+          <!-- End of Featured Article section -->
+
+        <!-- Beginnining of article grid -->
+        <div class="banner">
+          <div class="banner-content push-down">
+
+            <div class="row">
+              <% posts = Post.all[0...-1].last(2)  %>
+              <% posts.each do |post|  %>
+                <div class="col-xs-12 col-md-6">
+                  <div class="table-info">
+                    <%= link_to post_path(post), class:"navbar-wagon-link" do %>
+                    <div style="background-image: linear-gradient(-386deg, rgba(68, 69, 71, 0) 0%, rgba(0, 0, 0, 0.8) 50%),url('<%= image_path 'test.jpg' %>'); background-repeat:   no-repeat; background-position: center center;" id="featured-article">
+                      <h4><%= post.title  %></h4>
+                      <p>
+                        <%= post.preview %>
+                      </p>
+                    </div>
+                    <% end %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+            <br>
+            <div class="row">
+              <% posts = Post.all[0...-3].last(2)  %>
+              <% posts.each do |post|  %>
+                <div class="col-xs-12 col-md-6">
+                  <div class="table-info">
+                    <%= link_to post_path(post), class:"navbar-wagon-link" do %>
+                    <div style="background-image: linear-gradient(-386deg, rgba(68, 69, 71, 0) 0%, rgba(0, 0, 0, 0.8) 50%),url('<%= image_path 'test.jpg' %>'); background-repeat:   no-repeat; background-position: center center;" id="featured-article">
+                      <h4><%= post.title  %></h4>
+                      <p>
+                        <%= post.preview %>
+                      </p>
+                    </div>
+                    <% end %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <br>
+        <%= link_to "All Articles", posts_path, class:"button btn-block text-center" %>
+        <!-- end of Articles grid -->
+
 
 
   <!-- Closing div for container -->
