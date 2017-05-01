@@ -486,13 +486,26 @@
 <div class="footer">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4"></div>
+      <div class="col-md-4" style="margin-top: 222px;">
+        <%= link_to "Admin sign-in", new_user_session_path, id:"admin-sign-in" %>
+      </div>
       <div class="col-xs-12 col-md-4 text-center" style="margin-top: 117px;">
         <%= image_tag 'richmond-2.png', id:"agency-image" %>
-        <p class="copyright-words">  <span class="margin-left-footer">Copyright Richmond Web Design <%= Date.today.year %> </span></p>
+        <p class="copyright-words">  <span class="margin-left-footer">Copyright Liz Cox Consultancy. All rights reserved. <%= Date.today.year %> </span></p>
       </div>
-      <div class="col-md-4" style="margin-top: 222px;">
-        <%= link_to "Admin sign-in", new_user_session_path %>
+      <div class="col-md-4" style="margin-top: 113px;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: justify;">
+        <div class="row">
+          <div class="col-xs-10">
+            <p>
+              We are a member of the European Mentoring & Coaching Council (EMCC) and subscribe to the EMCC code of ethics (see www.emccouncil.org). The EMCC exists to promote good practice and the expectation of good practice in mentoring and coaching across Europe.
+            </p>
+          </div>
+          <div class="col-xs-2">
+            <%= image_tag 'EMCC.jpg', id:"emcc" %>
+          </div>
+        </div>
       </div>
      </div>
    </div>
