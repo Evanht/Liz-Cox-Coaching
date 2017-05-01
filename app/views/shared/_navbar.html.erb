@@ -7,12 +7,12 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <div class="navbar-wagon-link">
-       <%= link_to '/#philosophy' do %>
+      <%= link_to '/#philosophy' do %>
         <h3>Philosophy</h3>
       <% end %>
     </div>
     <div class="navbar-wagon-link">
-       <%= link_to '/#what-we-do' do %>
+      <%= link_to '/#what-we-do' do %>
         <h3>What we do</h3>
       <% end %>
     </div>
@@ -27,7 +27,7 @@
       <% end %>
     </div>
     <div class="navbar-wagon-link">
-       <%= link_to '/#contact-us' do %>
+      <%= link_to '/#contact-us' do %>
         <h3 id="contact">Contact us</h3>
       <% end %>
     </div>
@@ -70,9 +70,31 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li>
+          <%= link_to '/#philosophy' do %>
+            <h3>Philosophy</h3>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to '/#what-we-do' do %>
+            <h3>What we do</h3>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to '/#about' do %>
+            <h3>About</h3>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to posts_path do %>
+            <h3>Articles</h3>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to '/#contact-us' do %>
+            <h3 id="contact">Contact us</h3>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
