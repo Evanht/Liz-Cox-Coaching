@@ -20,6 +20,7 @@ gem 'autoprefixer-rails'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'cloudinary'
 
 group :development, :test do
   gem 'binding_of_caller'

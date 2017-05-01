@@ -72,7 +72,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :preview)
+    params.require(:post).permit(:title, :body, :preview, :photo, :photo_cache)
   end
 
   def find_post

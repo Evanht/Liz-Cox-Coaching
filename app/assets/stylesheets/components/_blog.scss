@@ -6,9 +6,10 @@
   margin-top: 150px;
 }
 
-#featured-article {
+.featured-article {
   padding: 10px;
   height: 360px;
+  margin-top: 21px;
 }
 
 @media (max-width: 460px) {
@@ -23,4 +24,8 @@
     padding: 10px;
     height: 490px;
   }
+}
+
+#featured-positioning {
+  margin-top: 125px;
 }
