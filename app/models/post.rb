@@ -4,5 +4,6 @@ class Post < ApplicationRecord
   validates :title, presence: true, length: {maximum: 140}
   #This validates presence of body
   validates :body, presence: true
-  validates :preview, presence: true, length: {maximum: 300}
+  validates :photo, presence: true
+  validates :preview, presence: true, length: {maximum: 270}
 end
