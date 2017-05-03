@@ -234,6 +234,7 @@
 .copyright-words {
   margin-top: 10px;
   margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 #cke_post_body {
@@ -258,4 +259,12 @@
   font-family: Raleway;
   font-weight: 100;
   letter-spacing: 1px;
+}
+
+#emcc {
+  height: 71px;
+}
+
+#admin-sign-in {
+  color: rgba(255, 255, 255, 0.4);
 }
