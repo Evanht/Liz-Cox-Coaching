@@ -1,14 +1,14 @@
 
 <!-- This is the Home banner -->
-
-    <div class="home-banner" style="background-image: /*linear-gradient(-386deg, rgba(68, 69, 71, 0) 0%, rgba(0, 0, 0, 0.8) 50%),*/ url('<%= image_path 'paint-tube.png' %>'); background-repeat:   no-repeat; background-position: center center;">
+<div id="particles-js"></div>
+    <div class="home-banner zoomInLeft" style="background-image: /*linear-gradient(-386deg, rgba(68, 69, 71, 0) 0%, rgba(0, 0, 0, 0.8) 50%),*/ url('<%= image_path 'paint-tube.png' %>'); background-repeat:   no-repeat; background-position: center center;">
     <div class="container hide-overflow">
       <div class="row">
         <div class="banner">
           <div class="banner-content-top">
             <div class="col-xs-12 col-md-6">
-              <div class="banner-text">
-                <h1 style="letter-spacing: 3px;">Creating <span class="blue-underline">Sustainable change</span></h1>
+              <div class="banner-text fadeIn">
+                <h1 style="letter-spacing: 3px;">Creating <span class="header-underline-red">Sustainable change</span></h1>
                 <p style="margin-top: 53px;">Working with boards, teams and individuals to unlock their potential and to help them perform at their best.</p>
                 <h3 id="beneath-surface-text">…by going <span class="">beneath</span> the surface</h3>
               </div>
@@ -32,9 +32,9 @@
   <div class="center" style="text-align: center;">
     <div class="banner">
       <div class="banner-content">
-        <div class="row">
+        <div class="row" id="three-info-background" style="background-image: url('<%= image_path 'grey-line.png' %>');">
           <div class="col-xs-12 col-md-4">
-            <%= image_tag 'blue-flower.png', class:"flower-sizing" %>
+            <%= image_tag 'eye-red.svg', class:"icon-sizing" %>
             <p style="text-align: center;">
               Recognising that the right
               answer is not always the
@@ -42,14 +42,14 @@
             </p>
           </div>
           <div class="col-xs-12 col-md-4">
-            <%= image_tag 'yellow-flower.png', class:"flower-sizing" %>
+            <%= image_tag 'ear-red.svg', class:"icon-sizing" %>
             <p style="text-align: center;">
               Listening as much to what is
               <span class="yellow-underline text-bold">not said</span>  as to what <span class="blue-underline text-bold">is said</span>
             </p>
           </div>
           <div class="col-xs-12 col-md-4">
-            <%= image_tag 'purple-flower.png', class:"flower-sizing" %>
+            <%= image_tag 'experience-black.svg', class:"icon-sizing" %>
             <p style="text-align: center;">
               Drawing on a wealth of
               experience and expertise
@@ -98,7 +98,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-md-6">
-          <%= image_tag 'white-flowers.png', class:"flower-sizing" %>
+          <%= image_tag 'board-coaching.svg', class:"icon-larger-sizing" %>
         </div>
 
       </div>
@@ -110,7 +110,7 @@
     <div class="banner-content">
       <div class="row">
         <div class="col-xs-12 col-md-6">
-          <%= image_tag 'white-flower.png', class:"flower-sizing", id:"push-img-down" %>
+          <%= image_tag 'individual-coaching.svg', class:"icon-larger-sizing", id:"push-img-down" %>
         </div>
         <div class="col-xs-12 col-md-6">
           <div class="table-info">
@@ -171,7 +171,7 @@
 
   <!-- This is the Team Coaching section -->
 
-  <div class="banner">
+  <div class="banner" >
     <div class="banner-content">
       <div class="row">
         <div class="col-xs-12 col-md-6">
@@ -219,7 +219,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-md-6">
-          <%= image_tag 'white-drops.png', class:"flower-sizing", id:"push-img-down" %>
+          <%= image_tag 'team-coaching.svg', class:"icon-larger-sizing", id:"push-img-down" %>
         </div>
       </div>
       <div id="about"></div>

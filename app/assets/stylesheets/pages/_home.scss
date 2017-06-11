@@ -2,3 +2,23 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+ #particles-js {
+   position:fixed;
+   top:0;
+   right:0;
+   bottom:0;
+   left:0;
+   z-index:0;
+ }
+
+.icon-sizing {
+  height: 300px;
+  margin: 20px 0px;
+}
+
+#three-info-background {
+  // background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
