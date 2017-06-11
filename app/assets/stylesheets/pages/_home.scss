@@ -3,21 +3,23 @@
  * (margin/padding adjustments)
  * ------------------------------------- */
  #particles-js {
-   position:fixed;
+   position: absolute;
    top:0;
    right:0;
-   bottom:0;
-   left:0;
+   left: 0;
+   height: 100vh;
    z-index:0;
  }
 
 .icon-sizing {
   height: 300px;
-  margin: 20px 0px;
+  margin: 20px 0px 40px;
 }
 
 #three-info-background {
   // background-attachment: fixed;
+  padding-top: 20vh;
+  border-top: 1px solid #E6E6E6;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
