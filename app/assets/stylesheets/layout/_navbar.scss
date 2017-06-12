@@ -1,8 +1,7 @@
 /* Main class */
 .navbar-wagon {
   // border-bottom: 1px solid white;
-  background: rgba(0,0,0,0.8);
-
+  background: rgba(255,255,255,0.9);
   transition: all 0.3s ease;
   display: flex;
   height: 100px;
@@ -25,7 +24,7 @@
 
 /* Navbar logo */
 .navbar-logo-text {
-  color: white;
+  color: black;
   font-weight: 200;
   font-family: Roboto;
   letter-spacing: 3px;
@@ -39,7 +38,7 @@
 }
 
 #contact {
-  border: 1px solid $blue;
+  border: 2px solid #B32300;
   padding: 8px;
 }
 /* Navbar right section (with form, links, button) */
@@ -58,14 +57,14 @@
 
 /* Navbar standard link */
 .navbar-wagon-link {
-  color: #C1C9D4;
+  color: black;
   font-size: 14px;
 }
 
 .navbar-wagon-link h3{
   margin-right: 30px;
   font-size: 20px;
-  color: white;
+  color: black;
 }
 
 .navbar-wagon-link:hover {

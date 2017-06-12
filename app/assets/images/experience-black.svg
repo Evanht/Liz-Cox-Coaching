@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="1000px" viewBox="0 0 600 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #000000;">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>A6</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="A6" stroke="#FFFFFF" stroke-width="3">
+            <path d="M129.5,418.5 L497.5,418.5" id="Line"></path>
+            <path d="M116.5,130.5 L484.5,130.5" id="Line"></path>
+            <path d="M129.5,274.5 L312.5,274.5" id="Line"></path>
+            <path d="M130.5,670.5 L313.5,670.5" id="Line"></path>
+            <path d="M313.5,736.5 L496.5,736.5" id="Line"></path>
+            <path d="M116.5,880.5 L496.5,880.5" id="Line"></path>
+        </g>
+    </g>
+</svg>
