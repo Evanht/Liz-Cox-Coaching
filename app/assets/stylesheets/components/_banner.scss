@@ -40,13 +40,12 @@
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 100;
   color: black;
   margin-bottom: 20px;
   font-family: Raleway;
   letter-spacing: 1px;
-  text-align: justify;
 }
 
 .banner-text{
@@ -96,6 +95,18 @@
   margin-bottom: 68px;
   margin-top: 50px;
   letter-spacing: 11px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+#liz-cox {
+
+  color: black;
+  margin-bottom: 68px;
+  margin-top: 50px;
+  letter-spacing: 11px;
+  text-align: left;
+  margin-top: 80px;
 }
 
 .table-info{
@@ -113,11 +124,10 @@
   border-radius: 6px
 }
 
-.featured-testimonial{
-  font-family: Roboto;
-  font-weight: 300;
+#featured-testimonial{
   font-style: italic;
-  margin-top: 20px;
+  font-size: 16px;
+  text-align: justify;
 }
 
 #signature{
@@ -140,7 +150,7 @@
 }
 
 .button {
-  border: 1px solid white;
+  border: none;
   padding: 10px;
   color: white;
   letter-spacing: 3px;
@@ -175,6 +185,7 @@
 
 .modal-body {
   padding: 48px;
+  background-color: white;
 }
 
 .modal-footer {
@@ -198,26 +209,33 @@
 // }
 
 .form-control {
-  background-color: black;
-  color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 3px;
 }
 
 
 .footer{
   width: 100%;
-  height: 200px; //your desired height
+  height: 300px; //your desired height
   position: relative;
   bottom: 0;
   left: 0;
-  background-color: black;
+  background-color: white;
+  color: black;
   margin-top: 40px;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .footer p {
-
-   font-weight: 100;
-   font-size: 14px;
+  width: 50%;
+  font-weight: 100;
+  font-size: 14px;
 }
 
 #copyright{
@@ -245,7 +263,7 @@
 .copyright-words {
   margin-top: 10px;
   margin-bottom: 10px;
-  color: rgba(255, 255, 255, 0.4);
+  color: black;
 }
 
 #cke_post_body {
@@ -277,5 +295,5 @@
 }
 
 #admin-sign-in {
-  color: rgba(255, 255, 255, 0.4);
+  color: black;
 }

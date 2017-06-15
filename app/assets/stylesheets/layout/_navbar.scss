@@ -33,13 +33,19 @@
 }
 
 .navbar-logo-text:hover {
-  color: $blue;
+  //color: $blue;
   text-decoration: none;
 }
 
 #contact {
   border: 2px solid #B32300;
   padding: 8px;
+
+  &:hover {
+    background: #B32300;
+    color: white;
+    text-decoration: none;
+  }
 }
 /* Navbar right section (with form, links, button) */
 .navbar-wagon-right {
