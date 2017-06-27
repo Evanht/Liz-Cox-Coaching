@@ -80,6 +80,35 @@
 								<li>
 									<a href="#contact-us" data-offset="-60" class="scroll-link">Contact Us</a>
 								</li>
+								<!-- Different navigation if login or not -->
+							 <% if user_signed_in? %>
+
+								 <!-- Notification -->
+
+								 <!-- Profile picture and dropdown -->
+								<li>
+									<div class="dropdown avatar-navbar">
+										 <%= image_tag "liz-avatar.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+										 <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+											 <li>
+												 <%= link_to "/posts/new" do %>
+													 <i class="fa fa-user"></i> <%= t(".profile", default: "Post new article") %>
+												 <% end %>
+											 </li>
+											 <li>
+												 <%= link_to "#" do %>
+													 <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
+												 <% end %>
+											 </li>
+											 <li>
+												 <%= link_to destroy_user_session_path, method: :delete do %>
+													 <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+												 <% end %>
+											 </li>
+										 </ul>
+									 </div>
+								 </li>
+							 <% end %>
 							</ul>
 						</nav>
 					</div>
