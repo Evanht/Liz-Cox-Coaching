@@ -187,7 +187,7 @@
   <!-- This is the About section -->
 
   <!-- Hero Section 5 -->
-		<div class="section-block hero-5 hero-5-3 show-media-column-on-mobile color-charcoal custom-bkg-grey">
+		<div class="section-block hero-5 hero-5-3 show-media-column-on-mobile color-charcoal custom-bkg-grey" id="about">
 			<div class="media-column width-6" style="background-image: url(<%= image_path 'headshot-liz.png', id:"liz-headshot" %>);"></div>
 			<div class="row">
 				<div class="column width-5 offset-7">
@@ -216,7 +216,7 @@
 										<div class="tms-content-scalable">
 											<div class="row">
 												<div class="column width-12">
-													<blockquote class="center large">
+													<blockquote class="center lead color-grey-light">
 														<p>The Board of Trustees at Positively UK has worked with Liz Cox over the past 18 months. Liz has led two day-long workshops designed to maximise the direction, connection and cohesiveness of our Board. Her focus is always on ensuring maximum interaction between the Trustees; that everyone is heard and has the space to shape the future of the organisation. Group work is a strong feature of her approach. The result is a connected Board with a clear, sharpened vision, a coordinated strategy and a team fully aligned behind it and ready to deliver.
 															<cite>Chair, Board of Trustees.</cite>
 														</p>
@@ -229,7 +229,7 @@
 										<div class="tms-content-scalable">
 											<div class="row">
 												<div class="column width-12">
-													<blockquote class="center large">
+													<blockquote class="center lead color-grey-light">
 														<p>I’ve worked closely with Liz for over 15 years and during that time she has never  failed to provide excellent advice. Her guidance is always considered and thought-through; she thinks strategically, able to recognise the bigger picture which is complemented by her awareness of any sensitivities involved so that she recommends the most diplomatic course of action. This combination of skills has contributed to a long and successful relationship and has resulted in her becoming a most trusted confidante.
 															<cite>Managing Director, Marketing Services</cite>
 														</p>
@@ -242,7 +242,7 @@
 										<div class="tms-content-scalable">
 											<div class="row">
 												<div class="column width-12">
-													<blockquote class="center large">
+													<blockquote class="center lead color-grey-light">
 														<p>Liz combines insight with incisiveness, which she supports with exceptional listening ability and obvious respect. She epitomises professionalism.
 															<cite>Partner, Law Firm.</cite>
 														</p>
@@ -255,7 +255,7 @@
 										<div class="tms-content-scalable">
 											<div class="row">
 												<div class="column width-12">
-													<blockquote class="center large">
+													<blockquote class="center lead color-grey-light">
 														<p>Liz has a relaxed and engaging style which rubbed off on me. She knew when to be lighthearted and when to be more serious. She has seriously high EQ.
 															<cite>Director, Private Equity Fund.</cite>
 														</p>
@@ -268,7 +268,7 @@
 										<div class="tms-content-scalable">
 											<div class="row">
 												<div class="column width-12">
-													<blockquote class="center large">
+													<blockquote class="center lead color-grey-light">
 														<p>Liz showed me that positive change is possible. This has given me dramatically more confidence.
 															<cite>Director, Investment Bank.</cite>
 														</p>
@@ -281,7 +281,7 @@
 										<div class="tms-content-scalable">
 											<div class="row">
 												<div class="column width-12">
-													<blockquote class="center large">
+													<blockquote class="center lead color-grey-light">
 														<p>I value and trust Liz more than anyone else I have worked with in my business career.
 															<cite>Managing Director, Marketing Services.</cite>
 														</p>
@@ -377,6 +377,7 @@
 
 
   <!-- News -->
+    <span id="articles"></span>
       <% if Post.all != [] %>
       <% posts = Post.all[0...-1].last(2)  %>
 				<section id="news">
@@ -400,7 +401,7 @@
 														<%= cl_image_tag Post.last.photo, :secure => true, width:730, crop: :fill %>
 														<span class="overlay-info">
 															<span>
-																<span>
+																<span class="color-grey-light">
 																	<%= Post.last.title %>
 																</span>
 															</span>
@@ -411,7 +412,7 @@
 											<div class="post-content">
 												<h2 class="post-title"><a href="blog-single-post-sidebar-right.html"><%= Post.last.title %></a></h2>
 												<div class="post-info">
-													<span class="post-date"><%= Post.last.created_at %></span>
+													<span class="post-date"><%= Post.last.created_at.strftime("%b %d, %Y") %></span>
 												</div>
 												<p><%= Post.last.preview %></p>
 											</div>
@@ -426,7 +427,7 @@
 														<%= cl_image_tag post.photo, :secure => true, width:730, crop: :fill %>
 														<span class="overlay-info">
 															<span>
-																<span>
+																<span class="color-grey-light">
 																	<%= post.title %>
 																</span>
 															</span>
@@ -437,7 +438,7 @@
 											<div class="post-content">
 												<h2 class="post-title"><a href="blog-single-post-sidebar-right.html"><%= post.title %></a></h2>
 												<div class="post-info">
-													<span class="post-date"><%= post.created_at %></span>
+													<span class="post-date"><%= post.created_at.strftime("%b %d, %Y") %></span>
 												</div>
 												<p><%= post.preview %></p>
 											</div>
