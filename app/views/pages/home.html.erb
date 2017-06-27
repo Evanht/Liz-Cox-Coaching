@@ -1,7 +1,8 @@
 
 <!-- This is the Home banner -->
+ <!-- style="background-image: /*linear-gradient(-386deg, rgba(68, 69, 71, 0) 0%, rgba(250, 250, 250, 0.9) 50%),*/ url('<%= image_path 'paint-tube.png' %>'); background-repeat:   no-repeat; background-position: center center;" -->
 <div id="particles-js"></div>
-    <div class="home-banner zoomInLeft" style="background-image: /*linear-gradient(-386deg, rgba(68, 69, 71, 0) 0%, rgba(250, 250, 250, 0.9) 50%),*/ url('<%= image_path 'paint-tube.png' %>'); background-repeat:   no-repeat; background-position: center center;">
+    <div class="home-banner zoomInLeft">
     <div class="container hide-overflow">
       <div class="row">
         <div class="banner">
@@ -10,7 +11,7 @@
               <div class="banner-text fadeIn">
                 <h1 style="letter-spacing: 3px;">Creating <span class="header-underline-red">Sustainable change</span></h1>
                 <p style="margin-top: 53px;">Working with boards, teams and individuals to unlock their potential and to help them perform at their best.</p>
-                <h3 id="beneath-surface-text">…by going <span class="">beneath</span> the surface</h3>
+                <!-- <h3 id="beneath-surface-text">…by going <span class="">beneath</span> the surface</h3> -->
               </div>
             </div>
             <div class="col-xs-12 col-md-6">
@@ -194,8 +195,8 @@
 						<div class="hero-content-inner horizon" data-animate-in="preset:slideInRightShort;duration:1000ms;" data-threshold="0.5">
 							<p class="text-uppercase mb-10">Profile</p>
 							<h2>Liz Cox (BA, MSc)</h2>
-							<p class="mb-10">Liz acts as a coach and advisor to boards, senior executives, and leaders within a number of organisations and industries including corporate, finance, marketing, creative media, property and publishing.  An alumni of Henley Business School, Liz specialises in leadership development, strategic planning, organisational structure and staffing retention practices, drawing on her extensive entrepreneurial and corporate business experience. <br/><br/> Her career began in advertising at Saatchi & Saatchi before moving into market research. She co-founded Directions and built the company into one of the premier boutique research firms in the UK. After selling her ownership in Directions, she joined The Big Picture – a growing design research agency with a blue-chip, international client base – and helped guide the firm’s strategic and organisational development to become a global leader in its field. <br/><br/> Liz holds a Masters Degree in Coaching and Behavioural Change (Distinction) and a Certificate in Coaching (Distinction) from the Henley Business School.  She also holds a Bachelor’s Degree in French and Italian from the University of London. Liz subscribes to the EMCC (European Mentoring & Coaching Council) code of ethics.</p>
-							<p class="opacity-05 weight-bold">BA - MSc</p>
+							<p class="mb-10 opacity-05">Liz acts as a coach and advisor to boards, senior executives, and leaders within a number of organisations and industries including corporate, finance, marketing, creative media, property and publishing.  An alumni of Henley Business School, Liz specialises in leadership development, strategic planning, organisational structure and staffing retention practices, drawing on her extensive entrepreneurial and corporate business experience. <br/><br/> Her career began in advertising at Saatchi & Saatchi before moving into market research. She co-founded Directions and built the company into one of the premier boutique research firms in the UK. After selling her ownership in Directions, she joined The Big Picture – a growing design research agency with a blue-chip, international client base – and helped guide the firm’s strategic and organisational development to become a global leader in its field. <br/><br/> Liz holds a Masters Degree in Coaching and Behavioural Change (Distinction) and a Certificate in Coaching (Distinction) from the Henley Business School.  She also holds a Bachelor’s Degree in French and Italian from the University of London. Liz subscribes to the EMCC (European Mentoring & Coaching Council) code of ethics.</p>
+							<!-- <p class="opacity-05 weight-bold">BA - MSc</p> -->
 						</div>
 					</div>
 				</div>
@@ -362,83 +363,100 @@
       <!-- end of modal -->
           <!-- end of the About section above -->
   </div>
+
+  <!-- <% if Post.all != [] %>
+    <%= link_to post_path(Post.last.id), class:"navbar-wagon-link" do %>
+    <div style="background-image: linear-gradient(-386deg, rgba(68, 69, 71, 0) 0%, rgba(250, 250, 250, 0.6) 50%),url('<%= cl_image_path Post.last.photo, :secure => true, width:730, crop: :fill %>'); background-repeat:   no-repeat; background-position: center center;" class="featured-article" id="featured-positioning">
+      <h4><%= Post.last.title  %></h4>
+      <p>
+        <%= Post.last.preview %>
+      </p>
+    </div>
+    <% end %>
+   <% end %> -->
+
+
+  <!-- News -->
+      <% if Post.all != [] %>
+      <% posts = Post.all[0...-1].last(2)  %>
+				<section id="news">
+					<div class="section-block pb-30">
+						<div class="row">
+							<div class="column width-12">
+								<p class="text-uppercase mb-10">Musings and Discussions</p>
+								<h2>Articles</h2>
+							</div>
+						</div>
+					</div>
+					<div class="section-block content-inner blog-masonry grid-container fade-in-progressively no-padding-top" data-layout-mode="masonry" data-grid-ratio="1.5" data-animate-resize data-animate-resize-duration="0">
+						<div class="row">
+							<div class="column width-12">
+								<div class="row grid content-grid-3 clearfix">
+									<div class="grid-item grid-sizer">
+										<article class="post">
+											<div class="post-media">
+												<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#00000" data-hover-bkg-opacity="0.5">
+													<a class="overlay-link" href="blog-single-post-sidebar-right.html">
+														<%= cl_image_tag Post.last.photo, :secure => true, width:730, crop: :fill %>
+														<span class="overlay-info">
+															<span>
+																<span>
+																	<%= Post.last.title %>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+											</div>
+											<div class="post-content">
+												<h2 class="post-title"><a href="blog-single-post-sidebar-right.html"><%= Post.last.title %></a></h2>
+												<div class="post-info">
+													<span class="post-date"><%= Post.last.created_at %></span>
+												</div>
+												<p><%= Post.last.preview %></p>
+											</div>
+										</article>
+									</div>
+                  <% posts.each do |post|  %>
+									<div class="grid-item">
+										<article class="post">
+											<div class="post-media">
+												<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#00000" data-hover-bkg-opacity="0.5">
+													<a class="overlay-link" href="blog-single-post-sidebar-right.html">
+														<%= cl_image_tag post.photo, :secure => true, width:730, crop: :fill %>
+														<span class="overlay-info">
+															<span>
+																<span>
+																	<%= post.title %>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+											</div>
+											<div class="post-content">
+												<h2 class="post-title"><a href="blog-single-post-sidebar-right.html"><%= post.title %></a></h2>
+												<div class="post-info">
+													<span class="post-date"><%= post.created_at %></span>
+												</div>
+												<p><%= post.preview %></p>
+											</div>
+										</article>
+									</div>
+                  <% end %>
+								</div>
+							</div>
+                <%= link_to "All Articles", posts_path, class:"button btn-block text-center" %>
+						</div>
+					</div>
+				</section>
+      <% end %>
+			<!-- News End -->
           <!-- Beginning of the Articles section -->
 
+    <!-- End of  Article section -->
 
-  <div class="banner">
-    <div class="banner-content push-down">
-      <div class="row">
-        <div class="col-xs-12 col-md-6">
-          <div class="table-info">
-          <% if Post.all != [] %>
-            <%= link_to post_path(Post.last.id), class:"navbar-wagon-link" do %>
-            <div style="background-image: linear-gradient(-386deg, rgba(68, 69, 71, 0) 0%, rgba(250, 250, 250, 0.6) 50%),url('<%= cl_image_path Post.last.photo, :secure => true, width:730, crop: :fill %>'); background-repeat:   no-repeat; background-position: center center;" class="featured-article" id="featured-positioning">
-              <h4><%= Post.last.title  %></h4>
-              <p>
-                <%= Post.last.preview %>
-              </p>
-            </div>
-            <% end %>
-           <% end %>
-          </div>
-        </div>
-        <div class="col-md-6 hidden-sm">
-          <%= image_tag 'article.svg', id:"featured-positioning", class:"width-auto" %>
-        </div>
-      </div>
 
-      </div>
-    </div>
-          <!-- End of Featured Article section -->
-
-        <!-- Beginnining of article grid -->
-        <div class="banner">
-          <div class="banner-content push-down">
-
-            <div class="row">
-              <% posts = Post.all[0...-1].last(2)  %>
-              <% posts.each do |post|  %>
-                <div class="col-xs-12 col-md-6">
-                  <div class="table-info">
-                    <%= link_to post_path(post), class:"navbar-wagon-link" do %>
-                    <div style="background-image: linear-gradient(-386deg, rgba(68, 69, 71, 0) 0%, rgba(250, 250, 250, 0.6) 50%),url('<%= cl_image_path post.photo, :secure => true, width:730, crop: :fill %>'); background-repeat:   no-repeat; background-position: center center;" class="featured-article">
-                      <h4><%= post.title  %></h4>
-                      <p>
-                        <%= post.preview %>
-                      </p>
-                    </div>
-                    <% end %>
-                  </div>
-                </div>
-              <% end %>
-            </div>
-            <br>
-            <div class="row">
-              <% posts = Post.all[0...-3].last(2)  %>
-              <% posts.each do |post|  %>
-                <div class="col-xs-12 col-md-6">
-                  <div class="table-info">
-                    <%= link_to post_path(post), class:"navbar-wagon-link" do %>
-                    <div style="background-image: linear-gradient(-386deg, rgba(68, 69, 71, 0) 0%, rgba(250, 250, 250, 0.6) 50%),url('<%= cl_image_path post.photo, :secure => true, width:730, crop: :fill %>'); background-repeat:   no-repeat; background-position: center center;" class="featured-article">
-                      <h4><%= post.title  %></h4>
-                      <p>
-                        <%= post.preview %>
-                      </p>
-                    </div>
-                    <% end %>
-                  </div>
-                </div>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <br>
-        <%= link_to "All Articles", posts_path, class:"button btn-block text-center" %>
-        <!-- end of Articles grid -->
-        <br>
-        <br>
-        <br>
-        <br>
         <br>
         <!-- Beginning of the Contact us section -->
         <div id="contact-us"</div>
