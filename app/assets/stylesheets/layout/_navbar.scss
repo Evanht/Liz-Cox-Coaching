@@ -18,7 +18,7 @@
   position: fixed;
   left: 0px;
   top: 0px;
-  z-index: 1;
+  z-index: 4;
   width: 100%;
 }
 
@@ -124,4 +124,12 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+#liz-navbar-logo {
+  height: 50px !important;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
 }

@@ -36,3 +36,34 @@
 .background-grey {
   background: #f5f5f5;
 }
+
+.custom-bkg-grey {
+  background-color: #FDFDFD;
+}
+
+.box-shadow-custom {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.align-btn-right {
+  position: absolute;
+  bottom: 5px;
+  right: 80px;
+}
+
+.posit-relative {
+  position: relative;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.avatar-navbar {
+  margin-top: 24px !important;
+}
+
+.avatar-navbar:hover {
+  cursor: pointer;
+}

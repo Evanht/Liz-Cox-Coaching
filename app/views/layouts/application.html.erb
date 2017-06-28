@@ -12,15 +12,9 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <!-- footer -->
-    <div class="footer">
-      <%= image_tag 'richmond-2.png', id:"agency-image" %>
-      <p class="copyright-words">  <span class="margin-left-footer">Copyright Liz Cox Consultancy. All rights reserved. <%= Date.today.year %> </span></p>
-      <p>
-        We subscribe to the EMCC code of ethics (see www.emccouncil.org). The EMCC exists to promote good practice and the expectation of good practice in mentoring and coaching across Europe.
-      </p>
-      <%= link_to "Admin sign-in", new_user_session_path, id:"admin-sign-in" %>
-    </div>
+
+    <!-- Footer -->
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
