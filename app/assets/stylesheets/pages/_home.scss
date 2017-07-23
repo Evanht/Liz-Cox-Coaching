@@ -24,6 +24,10 @@
   //  font-size: 1.5em;
  }
 
+ .justify-text {
+   text-align: justify;
+ }
+
 .icon-sizing {
   height: 300px;
   margin: 20px 0px 40px;
@@ -79,4 +83,14 @@
 
 .avatar-navbar:hover {
   cursor: pointer;
+}
+
+#profile-name {
+  font-family: "Playfair-Display";
+  border-bottom: 3px solid #B32300;
+  padding-bottom: 15px
+}
+
+#long-feature-header {
+    font-family: "Playfair-Display";
 }

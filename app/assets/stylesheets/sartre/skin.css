@@ -1955,7 +1955,7 @@ body,
 	color: #000;
 }
 .testimonials-5-about-1 .tms-bullet-nav{
-	background: #000;
+	background: #B32300;
 }
 
 /* Hero */
@@ -3018,7 +3018,8 @@ textarea.required-field{
 
 hr,
 .divider{
-	border-color: #eee;
+	border-color: #B32300;
+	border-width: 3px;
 }
 .page-intro .divider,
 .intro-title-2 .divider{
