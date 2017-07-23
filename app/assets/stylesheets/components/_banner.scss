@@ -33,24 +33,26 @@
 }
 .banner h1 {
   font-size: 36px;
-  font-weight: 100;
-  font-family: Raleway;
+  // font-weight: 100;
+  line-height: 80px;
+  font-family: "Playfair Display";
   letter-spacing: 1px;
   // border-bottom: 1px solid $blue;
 }
 
 .banner p {
-  font-size: 18px;
-  font-weight: 100;
-  color: black;
-  margin-bottom: 20px;
-  font-family: Raleway;
-  letter-spacing: 1px;
+  // font-size: 18px;
+  // font-weight: 300;
+  // font-style: italic;
+  // color: #36393D;
+  // margin-bottom: 20px;
+  // font-family: Raleway;
+  // letter-spacing: 1px;
 }
 
 .banner-text{
-  color: black;
-  margin-top: 26vh;
+  color: #36393D;
+  margin-top: 14vh;
   // background-color: rgba(0,0,0,0.5);
 }
 
@@ -65,6 +67,8 @@
 
 .header-underline-red{
   box-shadow: -1px 5px 0px -1px #B32300;
+  font-size: 100px;
+  line-height: 120px;
 }
 
 .yellow-underline{
